@@ -1,4 +1,4 @@
-﻿namespace Owin.Security.Extensibility.Facebook
+﻿namespace Kingdango.Owin.Security.ExtensibleMiddleware.Facebook
 {
 	internal static class Constants
 	{

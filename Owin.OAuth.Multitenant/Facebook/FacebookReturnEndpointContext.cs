@@ -2,7 +2,7 @@
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Provider;
 
-namespace Owin.Security.Extensibility.Facebook
+namespace Kingdango.Owin.Security.ExtensibleMiddleware.Facebook
 {
 	public class FacebookReturnEndpointContext : ReturnEndpointContext
 	{

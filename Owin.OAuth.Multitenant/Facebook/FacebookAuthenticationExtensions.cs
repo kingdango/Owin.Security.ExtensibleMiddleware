@@ -1,6 +1,7 @@
 ﻿using System;
+using Owin;
 
-namespace Owin.Security.Extensibility.Facebook
+namespace Kingdango.Owin.Security.ExtensibleMiddleware.Facebook
 {
 	public static class FacebookAuthenticationExtensions
 	{

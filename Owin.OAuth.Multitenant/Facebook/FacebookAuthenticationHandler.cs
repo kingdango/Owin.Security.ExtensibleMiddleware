@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using Microsoft.Owin;
 using Microsoft.Owin.Helpers;
 using Microsoft.Owin.Infrastructure;
@@ -10,9 +5,13 @@ using Microsoft.Owin.Logging;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Infrastructure;
 using Newtonsoft.Json.Linq;
-using Owin.Security.Extensibility.Facebook;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
-namespace Owin.Security.Extensibility.Facebook
+namespace Kingdango.Owin.Security.ExtensibleMiddleware.Facebook
 {
 	public class FacebookAuthenticationHandler : AuthenticationHandler<FacebookAuthenticationOptions>
 	{

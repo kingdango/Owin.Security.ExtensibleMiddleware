@@ -6,7 +6,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Provider;
 using Newtonsoft.Json.Linq;
 
-namespace Owin.Security.Extensibility.Facebook
+namespace Kingdango.Owin.Security.ExtensibleMiddleware.Facebook
 {
 	public class FacebookAuthenticatedContext : BaseContext
 	{

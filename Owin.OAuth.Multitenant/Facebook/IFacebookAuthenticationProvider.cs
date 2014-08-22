@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
-using Owin.Security.Extensibility.Facebook;
 
-namespace Owin.Security.Extensibility.Facebook
+namespace Kingdango.Owin.Security.ExtensibleMiddleware.Facebook
 {
 	public interface IFacebookAuthenticationProvider
 	{

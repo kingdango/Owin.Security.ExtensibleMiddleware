@@ -4,7 +4,7 @@ using System.Net.Http;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 
-namespace Owin.Security.Extensibility.Facebook
+namespace Kingdango.Owin.Security.ExtensibleMiddleware.Facebook
 {
 	public interface IFacebookAuthenticationOptions
 	{

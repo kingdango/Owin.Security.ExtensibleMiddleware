@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
 using Microsoft.Owin;
-using Microsoft.Owin.Security;
-using Owin.Security.Extensibility.Facebook;
+using Kingdango.Owin.Security.ExtensibleMiddleware.Facebook;
 
-namespace Owin.OAuth.Multitenant
+namespace Kingdango.Owin.Security.ExtensibleMiddleware
 {
 	public class MultiTenantFacebookAuthenticationOptions : FacebookAuthenticationOptions
 	{
