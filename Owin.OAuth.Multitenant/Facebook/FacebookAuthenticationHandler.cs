@@ -10,8 +10,9 @@ using Microsoft.Owin.Logging;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Infrastructure;
 using Newtonsoft.Json.Linq;
+using Owin.Security.Extensibility.Facebook;
 
-namespace Owin.OAuth.Multitenant.Facebook
+namespace Owin.Security.Extensibility.Facebook
 {
 	public class FacebookAuthenticationHandler : AuthenticationHandler<FacebookAuthenticationOptions>
 	{

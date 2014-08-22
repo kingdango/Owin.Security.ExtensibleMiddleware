@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using Owin.OAuth.Multitenant.Facebook;
+using Owin.Security.Extensibility.Facebook;
 
 namespace Owin.OAuth.Multitenant
 {

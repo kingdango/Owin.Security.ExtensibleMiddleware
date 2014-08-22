@@ -7,8 +7,8 @@
     <ProjectGuid>{4C19BBFF-40C2-4334-9732-D2736F507473}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Owin.OAuth.Multitenant</RootNamespace>
-    <AssemblyName>Owin.OAuth.Multitenant</AssemblyName>
+    <RootNamespace>Owin.Security.Extensibility</RootNamespace>
+    <AssemblyName>Owin.Security.Extensibility</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

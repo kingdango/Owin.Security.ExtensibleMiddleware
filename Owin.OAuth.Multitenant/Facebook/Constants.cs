@@ -1,4 +1,4 @@
-﻿namespace Owin.OAuth.Multitenant.Facebook
+﻿namespace Owin.Security.Extensibility.Facebook
 {
 	internal static class Constants
 	{

@@ -4,7 +4,7 @@ using System.Net.Http;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 
-namespace Owin.OAuth.Multitenant.Facebook
+namespace Owin.Security.Extensibility.Facebook
 {
 	public interface IFacebookAuthenticationOptions
 	{

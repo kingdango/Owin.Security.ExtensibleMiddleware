@@ -6,8 +6,9 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataHandler;
 using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Infrastructure;
+using Owin.Security.Extensibility.Facebook;
 
-namespace Owin.OAuth.Multitenant.Facebook
+namespace Owin.Security.Extensibility.Facebook
 {
 	public class FacebookAuthenticationMiddleware : AuthenticationMiddleware<FacebookAuthenticationOptions>
 	{

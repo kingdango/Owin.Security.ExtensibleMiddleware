@@ -6,7 +6,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Provider;
 using Newtonsoft.Json.Linq;
 
-namespace Owin.OAuth.Multitenant.Facebook
+namespace Owin.Security.Extensibility.Facebook
 {
 	public class FacebookAuthenticatedContext : BaseContext
 	{

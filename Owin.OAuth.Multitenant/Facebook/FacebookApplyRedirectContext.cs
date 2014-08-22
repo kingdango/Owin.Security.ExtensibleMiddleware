@@ -1,8 +1,9 @@
 ﻿using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Provider;
+using Owin.Security.Extensibility.Facebook;
 
-namespace Owin.OAuth.Multitenant.Facebook
+namespace Owin.Security.Extensibility.Facebook
 {
 	public class FacebookApplyRedirectContext : BaseContext<FacebookAuthenticationOptions>
 	{

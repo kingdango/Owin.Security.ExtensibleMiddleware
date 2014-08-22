@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Owin.OAuth.Multitenant.Facebook
+namespace Owin.Security.Extensibility.Facebook
 {
 	public static class FacebookAuthenticationExtensions
 	{
