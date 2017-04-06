@@ -16,9 +16,9 @@ namespace Kingdango.Owin.Security.ExtensibleMiddleware.Facebook
 	public class FacebookAuthenticationHandler : AuthenticationHandler<FacebookAuthenticationOptions>
 	{
 		private const string XmlSchemaString = "http://www.w3.org/2001/XMLSchema#string";
-		private const string TokenEndpoint = "https://graph.facebook.com/oauth/access_token";
-		private const string GraphApiEndpoint = "https://graph.facebook.com/me";
-
+		private const string TokenEndpoint = "https://graph.facebook.com/v2.8/oauth/access_token";
+		private const string GraphApiEndpoint = "https://graph.facebook.com/v2.8/me";
+		
 		private readonly ILogger _logger;
 		private readonly HttpClient _httpClient;
 
@@ -86,13 +86,19 @@ namespace Kingdango.Owin.Security.ExtensibleMiddleware.Facebook
 				HttpResponseMessage tokenResponse = await _httpClient.GetAsync(TokenEndpoint + "?" + tokenRequest, Request.CallCancelled);
 				tokenResponse.EnsureSuccessStatusCode();
 				string text = await tokenResponse.Content.ReadAsStringAsync();
-				IFormCollection form = WebHelpers.ParseForm(text);
+				JObject response = JObject.Parse(text);
+				string accessToken = response.Value<string>("access_token");
+				if (string.IsNullOrWhiteSpace(accessToken))
+				{
+					_logger.WriteWarning("Access token was not found");
+					return new AuthenticationTicket(null, properties);
+				}
 
-				string accessToken = form["access_token"];
-				string expires = form["expires"];
+		                string expires = response.Value<string>("expires_in");
+				string graphAddress = WebUtilities.AddQueryString(GraphApiEndpoint, "access_token", accessToken);
 
-				HttpResponseMessage graphResponse = await _httpClient.GetAsync(
-					GraphApiEndpoint + "?access_token=" + Uri.EscapeDataString(accessToken), Request.CallCancelled);
+				HttpResponseMessage graphResponse = await _httpClient.GetAsync(graphAddress, Request.CallCancelled);
+     
 				graphResponse.EnsureSuccessStatusCode();
 				text = await graphResponse.Content.ReadAsStringAsync();
 				JObject user = JObject.Parse(text);
